@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}{{ title }}{% endblock %} {% block
+meta_description %} Comprehensive educational content, examples, and best
+practices about the {{ title }} programming language. {% endblock %} {% block
+content %}
+<section class="category-header">
+  <h1>{{ title }} Programming</h1>
+  <p>
+    Welcome to the world of {{ title }}! Here, you'll find comprehensive
+    educational content about the {{ title }} programming language.
+  </p>
+</section>
+
+<section class="posts-grid">
+  {% for post in posts %}
+  <div class="post">
+    <h2>{{ post.title }}</h2>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    <p><strong>Date:</strong> {{ post.date.strftime('%Y-%m-%d') }}</p>
+    <p>{{ post.excerpt }}</p>
+    <a href="/post/{{ category }}/{{ post.name }}">Read More</a>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

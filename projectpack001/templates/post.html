@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}{{ title }}{% endblock %} {% block
+content %}
+<article class="post-content">{{ content | safe }}</article>
+
+<div class="post-navigation">
+  <a href="{{ url_for(category) }}" class="button">
+    ← All {{ category|title }} Content
+  </a>
+</div>
+{% endblock %}

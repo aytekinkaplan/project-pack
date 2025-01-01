@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/styles.css') }}"
-    />
-    <title>{% block title %}Your Website{% endblock %}</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock %} - Programming Education</title>
+    <meta name="description" content="{% block meta_description %}Comprehensive educational content on programming languages and web technologies.{% endblock %}">
+</head>
+<body>
     <!-- HEADER -->
     {% block header %}
     <header>
-      <nav>
-        <ul>
-          <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('java') }}">Java</a></li>
-          <li><a href="{{ url_for('python') }}">Python</a></li>
-          <li><a href="{{ url_for('javascript') }}">Javascript</a></li>
-          <li><a href="{{ url_for('react') }}">React</a></li>
-          <li><a href="{{ url_for('about') }}">About</a></li>
-        </ul>
-      </nav>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{{ url_for('index') }}" {% if request.endpoint == 'index' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ url_for('java') }}" {% if request.endpoint == 'java' %}class="active"{% endif %}>Java</a></li>
+                <li><a href="{{ url_for('python') }}" {% if request.endpoint == 'python' %}class="active"{% endif %}>Python</a></li>
+                <li><a href="{{ url_for('javascript') }}" {% if request.endpoint == 'javascript' %}class="active"{% endif %}>JavaScript</a></li>
+                <li><a href="{{ url_for('react') }}" {% if request.endpoint == 'react' %}class="active"{% endif %}>React</a></li>
+                <li><a href="{{ url_for('about') }}" {% if request.endpoint == 'about' %}class="active"{% endif %}>About</a></li>
+            </ul>
+        </nav>
     </header>
     {% endblock %}
 
     <!-- MAIN CONTENT -->
-    <main>{% block body %}{% endblock %}</main>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
 
     <!-- FOOTER -->
     {% block footer %}
     <footer>
-      <p>&copy; {{ current_year }} Your Website. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; {{ current_year }} Programming Education. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="{{ url_for('about') }}">About Me</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
     {% endblock %}
-  </body>
+</body>
 </html>

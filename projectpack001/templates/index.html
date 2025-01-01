@@ -1,2 +1,39 @@
-{% extends "base.html" %} {% block body %} {% block title %}{{ title }}{%
-endblock %} {% endblock %}
+{% extends "base.html" %} {% block title %}{{ title }}{% endblock %} {% block
+meta_description %} Welcome to the world of programming. You are in the right
+place for Java, Python, JavaScript, and React tutorials. {% endblock %} {% block
+content %}
+<section class="welcome">
+  <h1>Welcome to My Technology World</h1>
+  <p>All the resources you need to grow in the world of technology are here!</p>
+</section>
+
+<section class="categories">
+  <div class="category-grid">
+    <article class="category-card">
+      <h2>Java</h2>
+      <p>Learn the fundamentals of object-oriented programming.</p>
+      <a href="{{ url_for('java') }}" class="button">Java Tutorials</a>
+    </article>
+
+    <article class="category-card">
+      <h2>Python</h2>
+      <p>Discover Python, the modern and versatile programming language.</p>
+      <a href="{{ url_for('python') }}" class="button">Python Tutorials</a>
+    </article>
+
+    <article class="category-card">
+      <h2>JavaScript</h2>
+      <p>Learn JavaScript, the core programming language of the web.</p>
+      <a href="{{ url_for('javascript') }}" class="button"
+        >JavaScript Tutorials</a
+      >
+    </article>
+
+    <article class="category-card">
+      <h2>React</h2>
+      <p>Learn React to build modern web applications.</p>
+      <a href="{{ url_for('react') }}" class="button">React Tutorials</a>
+    </article>
+  </div>
+</section>
+{% endblock %}
