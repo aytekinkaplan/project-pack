@@ -4,55 +4,6 @@ author: Aytekin Kaplan
 date: 2025-01-01
 ---
 
-<div align="center">
-  <h1>JavaScript: Data Types</h1>
-  <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/aytekinkaplan/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
-  </a>
-  <a class="header-badge" target="_blank" href="https://twitter.com/ytknkpln">
-
-  </a>
-
-<sub>Author:
-<a href="https://www.linkedin.com/in/aytekinkaplan/" target="_blank">Aytekin Kaplan</a><br>
-<small> January, 2020</small>
-</sub>
-
-</div>
-</div>
-
-[<< Day 1](../readMe.md) | [Day 3 >>](../03_Day_Booleans_operators_date/03_booleans_operators_date.md)
-
-![Thirty Days Of JavaScript](../images/banners/day_1_2.png)
-
-- [📔 Day 2](#-day-2)
-  - [Data Types](#data-types)
-    - [Primitive Data Types](#primitive-data-types)
-    - [Non-Primitive Data Types](#non-primitive-data-types)
-  - [Numbers](#numbers)
-    - [Declaring Number Data Types](#declaring-number-data-types)
-    - [Math Object](#math-object)
-      - [Random Number Generator](#random-number-generator)
-  - [Strings](#strings)
-    - [String Concatenation](#string-concatenation)
-      - [Concatenating Using Addition Operator](#concatenating-using-addition-operator)
-      - [Long Literal Strings](#long-literal-strings)
-      - [Escape Sequences in Strings](#escape-sequences-in-strings)
-      - [Template Literals (Template Strings)](#template-literals-template-strings)
-    - [String Methods](#string-methods)
-  - [Checking Data Types and Casting](#checking-data-types-and-casting)
-    - [Checking Data Types](#checking-data-types)
-    - [Changing Data Type (Casting)](#changing-data-type-casting)
-      - [String to Int](#string-to-int)
-      - [String to Float](#string-to-float)
-      - [Float to Int](#float-to-int)
-  - [💻 Day 2: Exercises](#-day-2-exercises)
-    - [Exercise: Level 1](#exercise-level-1)
-    - [Exercise: Level 2](#exercise-level-2)
-    - [Exercises: Level 3](#exercises-level-3)
-
-# 📔 Day 2
-
 ## Data Types
 
 In the previous section, we mentioned a little bit about data types. Data or values have data types. Data types describe the characteristics of data. Data types can be divided into two:
@@ -132,15 +83,15 @@ let numbers = [1, 2, 3];
 console.log(nums == numbers); // false
 
 let userOne = {
-  name: "Asabeneh",
+  name: "Aytekin",
   role: "teaching",
-  country: "Finland",
+  country: "Holland",
 };
 
 let userTwo = {
-  name: "Asabeneh",
+  name: "Aytekin",
   role: "teaching",
-  country: "Finland",
+  country: "Holland",
 };
 
 console.log(userOne == userTwo); // false
@@ -156,9 +107,9 @@ let numbers = nums;
 console.log(nums == numbers); // true
 
 let userOne = {
-  name: "Asabeneh",
+  name: "Aytekin",
   role: "teaching",
-  country: "Finland",
+  country: "Holland",
 };
 
 let userTwo = userOne;
@@ -280,7 +231,7 @@ let space = " "; // an empty space string
 let firstName = "Aytekin";
 let lastName = "Kaplan";
 let country = "Holland";
-let city = "Helsinki";
+let city = "Lahey";
 let language = "JavaScript";
 let job = "teacher";
 let quote = "The saying,'Seeing is Believing' is not correct in 2020.";
@@ -310,13 +261,13 @@ Concatenating using the addition operator is an old way. This way of concatenati
 ```js
 // Declaring different variables of different data types
 let space = " ";
-let firstName = "Asabeneh";
-let lastName = "Yetayeh";
-let country = "Finland";
-let city = "Helsinki";
+let firstName = "Aytekin";
+let lastName = "Kaplan";
+let country = "Holland";
+let city = "Lahey";
 let language = "JavaScript";
 let job = "teacher";
-let age = 250;
+let age = 571;
 
 let fullName = firstName + space + lastName;
 let personInfoOne = fullName + ". I am " + age + ". I live in " + country; // ES5 string addition
@@ -325,7 +276,7 @@ console.log(personInfoOne);
 ```
 
 ```sh
-Asabeneh Yetayeh. I am 250. I live in Finland
+Aytekin Kaplan. I am 571. I live in Holland
 ```
 
 #### Long Literal Strings
@@ -335,7 +286,7 @@ A string could be a single character or paragraph or a page. If the string lengt
 
 ```js
 const paragraph =
-  "My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
+  "My name is Aytekin Kaplan. I live in Holland, Lahey.\
 I am a teacher and I love teaching. I teach HTML, CSS, JavaScript, React, Redux, \
 Node.js, Python, Data Analysis and D3.js for anyone who is interested to learn. \
 In the end of 2019, I was thinking to expand my teaching and to reach \
@@ -358,9 +309,7 @@ In JavaScript and other programming languages \ followed by some characters is a
 - \\": Double quote (")
 
 ```js
-console.log(
-  "I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?"
-); // line break
+console.log("I hope everyone is enjoying the JavaScript challenge.\nDo you ?"); // line break
 console.log("Days\tTopics\tExercises");
 console.log("Day 1\t3\t5");
 console.log("Day 2\t3\t5");
@@ -375,7 +324,7 @@ console.log("The saying 'Seeing is Believing' isn't correct in 2020");
 Output in console:
 
 ```sh
-I hope everyone is enjoying the 30 Days Of JavaScript challenge.
+I hope everyone is enjoying the JavaScript challenge.
 Do you ?
 Days  Topics  Exercises
 Day 1 3 5
@@ -409,13 +358,13 @@ console.log(`The sum of ${a} and ${b} is ${a + b}`); // injecting the data dynam
 **Example:2**
 
 ```js
-let firstName = "Asabeneh";
-let lastName = "Yetayeh";
-let country = "Finland";
-let city = "Helsinki";
+let firstName = "Aytekin";
+let lastName = "Kaplan";
+let country = "Holland";
+let city = "Lahey";
 let language = "JavaScript";
 let job = "teacher";
-let age = 250;
+let age = 571;
 let fullName = firstName + " " + lastName;
 
 let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.`; //ES6 - String interpolation method
@@ -425,8 +374,8 @@ console.log(personInfoThree);
 ```
 
 ```sh
-I am Asabeneh Yetayeh. I am 250. I live in Finland.
-I am Asabeneh Yetayeh. I live in Helsinki, Finland. I am a teacher. I teach JavaScript.
+I am Aytekin Kaplan. I am 571. I live in Holland.
+I am Aytekin Kaplan. I live in Lahey, Holland. I am a teacher. I teach JavaScript.
 ```
 
 Using a string template or string interpolation method, we can add expressions, which could be a value, or some operations (comparison, arithmetic operations, ternary operation).
@@ -452,7 +401,7 @@ Everything in JavaScript is an object. A string is a primitive data type that me
 ```js
 let js = "JavaScript";
 console.log(js.length); // 10
-let firstName = "Asabeneh";
+let firstName = "Aytekin";
 console.log(firstName.length); // 8
 ```
 
@@ -487,13 +436,13 @@ let string = "JavaScript";
 
 console.log(string.toUpperCase()); // JAVASCRIPT
 
-let firstName = "Asabeneh";
+let firstName = "Aytekin";
 
-console.log(firstName.toUpperCase()); // ASABENEH
+console.log(firstName.toUpperCase()); // Aytekin
 
-let country = "Finland";
+let country = "Holland";
 
-console.log(country.toUpperCase()); // FINLAND
+console.log(country.toUpperCase()); // Holland
 ```
 
 4. _toLowerCase()_: this method changes the string to lowercase letters.
@@ -503,13 +452,13 @@ let string = "JavasCript";
 
 console.log(string.toLowerCase()); // javascript
 
-let firstName = "Asabeneh";
+let firstName = "Aytekin";
 
-console.log(firstName.toLowerCase()); // asabeneh
+console.log(firstName.toLowerCase()); // Aytekin
 
-let country = "Finland";
+let country = "Holland";
 
-console.log(country.toLowerCase()); // finland
+console.log(country.toLowerCase()); // Holland
 ```
 
 5. _substr()_: It takes two arguments, the starting index and number of characters to slice.
@@ -518,7 +467,7 @@ console.log(country.toLowerCase()); // finland
 let string = "JavaScript";
 console.log(string.substr(4, 6)); // Script
 
-let country = "Finland";
+let country = "Holland";
 console.log(country.substr(3, 4)); // land
 ```
 
@@ -531,7 +480,7 @@ console.log(string.substring(0, 4)); // Java
 console.log(string.substring(4, 10)); // Script
 console.log(string.substring(4)); // Script
 
-let country = "Finland";
+let country = "Holland";
 
 console.log(country.substring(0, 3)); // Fin
 console.log(country.substring(3, 7)); // land
@@ -541,47 +490,47 @@ console.log(country.substring(3)); // land
 7. _split()_: The split method splits a string at a specified place.
 
 ```js
-let string = "30 Days Of JavaScript";
+let string = "JavaScript";
 
-console.log(string.split()); // Changes to an array -> ["30 Days Of JavaScript"]
+console.log(string.split()); // Changes to an array -> ["JavaScript"]
 console.log(string.split(" ")); // Split to an array at space -> ["30", "Days", "Of", "JavaScript"]
 
-let firstName = "Asabeneh";
+let firstName = "Aytekin";
 
-console.log(firstName.split()); // Change to an array - > ["Asabeneh"]
+console.log(firstName.split()); // Change to an array - > ["Aytekin"]
 console.log(firstName.split("")); // Split to an array at each letter ->  ["A", "s", "a", "b", "e", "n", "e", "h"]
 
-let countries = "Finland, Sweden, Norway, Denmark, and Iceland";
+let countries = "Holland, Sweden, Norway, Denmark, and Iceland";
 
-console.log(countries.split(",")); // split to any array at comma -> ["Finland", " Sweden", " Norway", " Denmark", " and Iceland"]
-console.log(countries.split(", ")); //  ["Finland", "Sweden", "Norway", "Denmark", "and Iceland"]
+console.log(countries.split(",")); // split to any array at comma -> ["Holland", " Sweden", " Norway", " Denmark", " and Iceland"]
+console.log(countries.split(", ")); //  ["Holland", "Sweden", "Norway", "Denmark", "and Iceland"]
 ```
 
 8. _trim()_: Removes trailing space in the beginning or the end of a string.
 
 ```js
-let string = "   30 Days Of JavaScript   ";
+let string = "   JavaScript   ";
 
 console.log(string);
 console.log(string.trim(" "));
 
-let firstName = " Asabeneh ";
+let firstName = " Aytekin ";
 
 console.log(firstName);
 console.log(firstName.trim()); // still removes spaces at the beginning and the end of the string
 ```
 
 ```sh
-   30 Days Of JavasCript
-30 Days Of JavasCript
-  Asabeneh
-Asabeneh
+   JavaScript
+JavaScript
+  Aytekin
+Aytekin
 ```
 
 9. _includes()_: It takes a substring argument and it checks if substring argument exists in the string. _includes()_ returns a boolean. If a substring exist in a string, it returns true, otherwise it returns false.
 
 ```js
-let string = "30 Days Of JavaScript";
+let string = "JavaScript";
 
 console.log(string.includes("Days")); // true
 console.log(string.includes("days")); // false - it is case sensitive!
@@ -590,7 +539,7 @@ console.log(string.includes("script")); // false
 console.log(string.includes("java")); // false
 console.log(string.includes("Java")); // true
 
-let country = "Finland";
+let country = "Holland";
 
 console.log(country.includes("fin")); // false
 console.log(country.includes("Fin")); // true
@@ -605,10 +554,10 @@ string.replace(oldsubstring, newsubstring);
 ```
 
 ```js
-let string = "30 Days Of JavaScript";
+let string = "JavaScript";
 console.log(string.replace("JavaScript", "Python")); // 30 Days Of Python
 
-let country = "Finland";
+let country = "Holland";
 console.log(country.replace("Fin", "Noman")); // Nomanland
 ```
 
@@ -619,7 +568,7 @@ string.charAt(index);
 ```
 
 ```js
-let string = "30 Days Of JavaScript";
+let string = "JavaScript";
 console.log(string.charAt(0)); // 3
 
 let lastIndex = string.length - 1;
@@ -633,7 +582,7 @@ string.charCodeAt(index);
 ```
 
 ```js
-let string = "30 Days Of JavaScript";
+let string = "JavaScript";
 console.log(string.charCodeAt(3)); // D ASCII number is 68
 
 let lastIndex = string.length - 1;
@@ -647,7 +596,7 @@ string.indexOf(substring);
 ```
 
 ```js
-let string = "30 Days Of JavaScript";
+let string = "JavaScript";
 
 console.log(string.indexOf("D")); // 3
 console.log(string.indexOf("Days")); // 3
@@ -685,7 +634,7 @@ let string = "30";
 console.log(string.concat("Days", "Of", "JavaScript")); // 30DaysOfJavaScript
 
 let country = "Fin";
-console.log(country.concat("land")); // Finland
+console.log(country.concat("land")); // Holland
 ```
 
 16. _startsWith_: it takes a substring as an argument and it checks if the string starts with that specified substring. It returns a boolean(true or false).
@@ -702,7 +651,7 @@ console.log(string.startsWith("Love")); // true
 console.log(string.startsWith("love")); // false
 console.log(string.startsWith("world")); // false
 
-let country = "Finland";
+let country = "Holland";
 
 console.log(country.startsWith("Fin")); // true
 console.log(country.startsWith("fin")); // false
@@ -722,7 +671,7 @@ console.log(string.endsWith("world")); // true
 console.log(string.endsWith("love")); // false
 console.log(string.endsWith("in the world")); // true
 
-let country = "Finland";
+let country = "Holland";
 
 console.log(country.endsWith("land")); // true
 console.log(country.endsWith("fin")); // false
@@ -810,14 +759,14 @@ To check the data type of a certain variable we use the _typeof_ method.
 // Different javascript data types
 // Let's declare different data types
 
-let firstName = "Asabeneh"; // string
-let lastName = "Yetayeh"; // string
-let country = "Finland"; // string
-let city = "Helsinki"; // string
-let age = 250; // number, it is not my real age, do not worry about it
+let firstName = "Aytekin"; // string
+let lastName = "Kaplan"; // string
+let country = "Holland"; // string
+let city = "Lahey"; // string
+let age = 571; // number, it is not my real age, do not worry about it
 let job; // undefined, because a value was not assigned
 
-console.log(typeof "Asabeneh"); // string
+console.log(typeof "Aytekin"); // string
 console.log(typeof firstName); // string
 console.log(typeof 10); // number
 console.log(typeof 3.14); // number
@@ -913,31 +862,31 @@ console.log(numInt); // 9
 
 ### Exercise: Level 1
 
-1. Declare a variable named challenge and assign it to an initial value **'30 Days Of JavaScript'**.
+1. Declare a variable named challenge and assign it to an initial value **'JavaScript'**.
 2. Print the string on the browser console using **console.log()**
 3. Print the **length** of the string on the browser console using _console.log()_
 4. Change all the string characters to capital letters using **toUpperCase()** method
 5. Change all the string characters to lowercase letters using **toLowerCase()** method
 6. Cut (slice) out the first word of the string using **substr()** or **substring()** method
-7. Slice out the phrase _Days Of JavaScript_ from _30 Days Of JavaScript_.
+7. Slice out the phrase _Days Of JavaScript_ from _JavaScript_.
 8. Check if the string contains a word **Script** using **includes()** method
 9. Split the **string** into an **array** using **split()** method
-10. Split the string 30 Days Of JavaScript at the space using **split()** method
+10. Split the string JavaScript at the space using **split()** method
 11. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' **split** the string at the comma and change it to an array.
-12. Change 30 Days Of JavaScript to 30 Days Of Python using **replace()** method.
-13. What is character at index 15 in '30 Days Of JavaScript' string? Use **charAt()** method.
-14. What is the character code of J in '30 Days Of JavaScript' string using **charCodeAt()**
-15. Use **indexOf** to determine the position of the first occurrence of **a** in 30 Days Of JavaScript
-16. Use **lastIndexOf** to determine the position of the last occurrence of **a** in 30 Days Of JavaScript.
+12. Change JavaScript to 30 Days Of Python using **replace()** method.
+13. What is character at index 15 in 'JavaScript' string? Use **charAt()** method.
+14. What is the character code of J in 'JavaScript' string using **charCodeAt()**
+15. Use **indexOf** to determine the position of the first occurrence of **a** in JavaScript
+16. Use **lastIndexOf** to determine the position of the last occurrence of **a** in JavaScript.
 17. Use **indexOf** to find the position of the first occurrence of the word **because** in the following sentence:**'You cannot end a sentence with because because because is a conjunction'**
 18. Use **lastIndexOf** to find the position of the last occurrence of the word **because** in the following sentence:**'You cannot end a sentence with because because because is a conjunction'**
 19. Use **search** to find the position of the first occurrence of the word **because** in the following sentence:**'You cannot end a sentence with because because because is a conjunction'**
-20. Use **trim()** to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
-21. Use **startsWith()** method with the string _30 Days Of JavaScript_ and make the result true
-22. Use **endsWith()** method with the string _30 Days Of JavaScript_ and make the result true
-23. Use **match()** method to find all the **a**’s in 30 Days Of JavaScript
-24. Use **concat()** and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
-25. Use **repeat()** method to print 30 Days Of JavaScript 2 times
+20. Use **trim()** to remove any trailing whitespace at the beginning and the end of a string.E.g ' JavaScript '.
+21. Use **startsWith()** method with the string _JavaScript_ and make the result true
+22. Use **endsWith()** method with the string _JavaScript_ and make the result true
+23. Use **match()** method to find all the **a**’s in JavaScript
+24. Use **concat()** and merge '30 Days of' and 'JavaScript' to a single string, 'JavaScript'
+25. Use **repeat()** method to print JavaScript 2 times
 
 ### Exercise: Level 2
 
@@ -985,7 +934,3 @@ console.log(numInt); // 9
    ```
 
 4. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
-
-🎉 CONGRATULATIONS ! 🎉
-
-[<< Day 1](../readMe.md) | [Day 3 >>](../03_Day_Booleans_operators_date/03_booleans_operators_date.md)
