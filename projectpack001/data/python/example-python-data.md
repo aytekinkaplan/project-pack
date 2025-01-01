@@ -1,3 +1,9 @@
+---
+title: My Awesome Post
+author: Aytekin Kaplan
+date: 2024-06-15
+---
+
 ````markdown
 # 🚀 Building a Modern Web Application with Flask
 
