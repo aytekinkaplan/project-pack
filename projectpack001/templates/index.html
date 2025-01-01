@@ -1,6 +1,9 @@
-{% extends "base.html" %} {% block body %} {% block title %}{{ title}}{%endblock
-%}
+{% extends "base.html" %} {% block body %} {% block title %}{{ title }}{%
+endblock %}
 <section>
-  <h1>Home</h1>
+  <div class="section-for-sliding-post">
+    {% if img %} {% include "card1.html" %} {% else %} {% include "card2.html"
+    %} {% endif %}
+  </div>
 </section>
 {% endblock %}
