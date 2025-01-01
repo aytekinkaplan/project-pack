@@ -18,6 +18,12 @@ def java():
 @app.route('/python')
 def python():
   return render_template('python.html', title='Python', current_year=datetime.now().year)
+@app.route('/javascript')
+def javascript():
+  return render_template('javascript.html', title='Javascript', current_year=datetime.now().year)
+@app.route('/react')
+def react():
+  return render_template('react.html', title='React', current_year=datetime.now().year)
 
 if __name__ == '__main__':
   app.run(debug=True, host='0.0.0.0')
