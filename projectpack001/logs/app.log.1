@@ -1,46 +1,4 @@
-2025-01-02 00:14:03,881 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
-2025-01-02 00:14:05,602 ERROR: Exception on /python [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
-Traceback (most recent call last):
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 105, in python
-    return render_template('python.html', title='Python', posts=posts, category='python')
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\templating.py", line 150, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\templating.py", line 131, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\jinja2\environment.py", line 1295, in render
-    self.environment.handle_exception()
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\python.html", line 1, in top-level template code
-    {% include "post-card.html" %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\post-card.html", line 1, in top-level template code
-    {% extends "base.html" %} {% block title %}{{ title }}{% endblock %} {% block
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\base.html", line 30, in top-level template code
-    {% block content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\post-card.html", line 23, in block 'content'
-    {% if post.date %} {{ post.date.strftime('%Y-%m-%d') if
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.TemplateRuntimeError: No filter named 'is_datetime' found.
-2025-01-02 00:14:05,607 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
-2025-01-02 00:14:06,316 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
+2025-01-02 00:14:34,363 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -77,7 +35,77 @@ Traceback (most recent call last):
     {% block content %}{% endblock %}
     ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\post-card.html", line 23, in block 'content'
-    {% if post.date %} {{ post.date.strftime('%Y-%m-%d') if
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    </section>
 jinja2.exceptions.TemplateRuntimeError: No filter named 'is_datetime' found.
-2025-01-02 00:14:06,320 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
+2025-01-02 00:14:34,370 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
+2025-01-02 00:14:44,387 INFO: Application startup [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:42]
+2025-01-02 00:57:11,956 ERROR: Error reading post 01-java-basic-syntax.md: while scanning a simple key
+  in "<unicode string>", line 5, column 1
+could not find expected ':'
+  in "<unicode string>", line 7, column 1 [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:73]
+2025-01-02 00:58:25,034 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 100, in java
+    posts = get_posts('java')
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 75, in get_posts
+    return sorted(posts, key=lambda x: x['date'], reverse=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-01-02 00:58:25,037 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
+2025-01-02 00:58:28,979 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 100, in java
+    posts = get_posts('java')
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 75, in get_posts
+    return sorted(posts, key=lambda x: x['date'], reverse=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-01-02 00:58:28,981 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
+2025-01-02 01:01:21,123 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 100, in java
+    posts = get_posts('java')
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 75, in get_posts
+    return sorted(posts, key=lambda x: x['date'], reverse=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-01-02 01:01:21,125 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]

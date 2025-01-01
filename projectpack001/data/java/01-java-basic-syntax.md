@@ -1,5 +1,13 @@
 ### 🚀 **Java Basic Syntax Markdown Structure – Enhanced and Modern Design**
 
+---
+
+title: Java Basic Syntax
+author: Aytekin Kaplan
+date: 2025-01-01
+
+---
+
 To make the Markdown structure more **readable**, **visually appealing**, and **practical**, the following layout is recommended:
 
 - 📚 **Main Headings:** Sections are clearly separated.

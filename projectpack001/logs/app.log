@@ -1,4 +1,4 @@
-2025-01-02 00:14:34,363 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
+2025-01-02 01:01:24,614 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,30 +12,33 @@ Traceback (most recent call last):
   File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 101, in java
-    return render_template('java.html', title='Java Programming', posts=posts, category='java')
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\templating.py", line 150, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\templating.py", line 131, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\jinja2\environment.py", line 1295, in render
-    self.environment.handle_exception()
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\java.html", line 1, in top-level template code
-    {% include "post-card.html" %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\post-card.html", line 1, in top-level template code
-    {% extends "base.html" %} {% block title %}{{ title }}{% endblock %} {% block
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\base.html", line 30, in top-level template code
-    {% block content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\templates\post-card.html", line 23, in block 'content'
-    </section>
-jinja2.exceptions.TemplateRuntimeError: No filter named 'is_datetime' found.
-2025-01-02 00:14:34,370 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
-2025-01-02 00:14:44,387 INFO: Application startup [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:42]
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 100, in java
+    posts = get_posts('java')
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 75, in get_posts
+    return sorted(posts, key=lambda x: x['date'], reverse=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-01-02 01:01:24,620 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
+2025-01-02 01:01:32,461 ERROR: Exception on /java [GET] [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\env\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 100, in java
+    posts = get_posts('java')
+            ^^^^^^^^^^^^^^^^^
+  File "C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py", line 75, in get_posts
+    return sorted(posts, key=lambda x: x['date'], reverse=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: can't compare datetime.datetime to datetime.date
+2025-01-02 01:01:32,463 ERROR: Server Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in C:\Users\aonik\OneDrive\Projects\project-pack\projectpack001\app.py:87]
