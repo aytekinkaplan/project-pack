@@ -1,5 +1,10 @@
 # members/views.py
 from django.http import HttpResponse
+from django.template import loader
 
 def members(request):
-    return HttpResponse("Hello, world. You're at the members index.")
+    template = loader.get_template('myfirst.html')
+    return HttpResponse(template.render())
+
+
+
