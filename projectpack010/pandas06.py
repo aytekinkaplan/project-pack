@@ -1,35 +1,24 @@
 import pandas as pd
 
-calories = {"day1": 420, "day2": 380, "day3": 390}
+from pandas04 import countries
 
-my_calories = pd.Series(calories)
-print(my_calories)
-
-print(my_calories["day1"])
-print(my_calories["day2"])
-print(my_calories["day3"])
-
-person = {
-    "kevin": {
-        "name": "kevin",
-        "age": 24,
-        "gender": "male"
-    },
-    "jane": {
-        "name": "jane",
-        "age": 23,
-        "gender": "female"
-    },
-    "bob": {
-        "name": "bob",
-        "age": 25,
-        "gender": "male"
-    }
+data = {
+    "name": ["kevin", "jane", "bob", "alice"],
+    "age": [24, 23, 25, 21],
+    "gender": ["male", "female", "male", "female"]
 }
 
-my_person = pd.DataFrame(person)
-print(my_person)
+my_data = pd.DataFrame(data)
+print(my_data)
 
-print(my_person["kevin"]["name"])
-print(my_person["jane"]["age"])
-print(my_person["bob"]["gender"])
+print(my_data["name"])
+print(my_data["age"])
+print(my_data["gender"])
+
+countries_with_their_capitals = {
+    "Counties": ["Turkey", "Germany", "France", "Italy", "Spain"],
+    "Capitals": ["Ankara", "Berlin", "Paris", "Rome", "Madrid"]
+}
+
+my_countries = pd.DataFrame(countries_with_their_capitals)
+print(my_countries)
