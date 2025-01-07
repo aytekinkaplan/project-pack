@@ -1,32 +1,35 @@
 import pandas as pd
 
-fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+calories = {"day1": 420, "day2": 380, "day3": 390}
 
-my_fruits = pd.Series(fruits)
-print(my_fruits)
+my_calories = pd.Series(calories)
+print(my_calories)
 
-print(my_fruits[0])
+print(my_calories["day1"])
+print(my_calories["day2"])
+print(my_calories["day3"])
 
-# Another example
-numbers = [1, 2, 3, 4, 5]
-my_numbers = pd.Series(numbers)
-print(my_numbers)
+person = {
+    "kevin": {
+        "name": "kevin",
+        "age": 24,
+        "gender": "male"
+    },
+    "jane": {
+        "name": "jane",
+        "age": 23,
+        "gender": "female"
+    },
+    "bob": {
+        "name": "bob",
+        "age": 25,
+        "gender": "male"
+    }
+}
 
-print(my_numbers[0])
-print(my_numbers[1])
+my_person = pd.DataFrame(person)
+print(my_person)
 
-# Another example
-fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
-my_fruits = pd.Series(fruits, index=["a", "b", "c", "d", "e"])
-print(my_fruits)
-
-print(my_fruits["a"])
-print(my_fruits["b"])
-print(my_fruits["c"])
-print(my_fruits["d"])
-print(my_fruits["e"])
-
-# Another example
-countries = ["Turkey", "Germany", "France", "Italy", "Spain"]
-my_favorite_countries = pd.Series(countries, index=["a", "b", "c", "d", "e"])
-print(my_favorite_countries)
+print(my_person["kevin"]["name"])
+print(my_person["jane"]["age"])
+print(my_person["bob"]["gender"])
