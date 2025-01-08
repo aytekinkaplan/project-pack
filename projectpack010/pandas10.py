@@ -1,17 +1,31 @@
 import pandas as pd
 
-# Veri seti oluşturuluyor
-data = {
-    "calories": [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000],
-    "duration": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+countries = {
+    "Countries": ["Turkey", "Germany", "France", "Italy", "Spain", "United States", "Canada", "Mexico", "Brazil",
+                  "Argentina", "Chile", "Colombia", "Peru", "Ecuador"],
+    "Capitals": ["Ankara", "Berlin", "Paris", "Rome", "Madrid", "New York", "Toronto", "Mexico City", "Sao Paulo",
+                 "Buenos Aires", "Santiago", "Bogota", "Lima", "Quito"],
+    "Population": [83.5, 83.3, 66.9, 60.8, 46.9, 329.5, 38.0, 127.1, 206.3, 11.1, 17.6, 50.9, 3.6, 3.4],
+    "Area": [780.9, 357.1, 640.9, 101.2, 505.7, 983.1, 998.2, 998.2, 854.7, 278.4, 163.4, 108.9, 128.0, 128.0],
+    "GDP": [17000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 11000, 12000, 13000, 14000, 15000, 16000],
+    "Languages": ["Turkish", "German", "French", "Spanish", "Portuguese", "English", "English", "Spanish", "Spanish",
+                  "Spanish", "Spanish", "Spanish", "Spanish", "Spanish"],
+    "Religion": ["Muslim", "Muslim", "Muslim", "Muslim", "Muslim", "Muslim", "Muslim", "Muslim", "Muslim", "Muslim",
+                 "Muslim", "Muslim", "Muslim", "Muslim"],
+    "Climate": ["Tropical", "Tropical", "Tropical", "Tropical", "Tropical", "Tropical", "Tropical", "Tropical",
+                "Tropical", "Tropical", "Tropical", "Tropical", "Tropical", "Tropical"],
+    "Currency": ["Lira", "Euro", "Euro", "Euro", "Euro", "Dollar", "Dollar", "Dollar", "Dollar", "Peso", "Peso", "Peso",
+                 "Peso", "Peso"],
+    "Government": ["Republic", "Republic", "Republic", "Republic", "Republic", "Republic", "Republic", "Republic",
+                   "Republic", "Republic", "Republic", "Republic", "Republic", "Republic"],
+    "Leader": ["Ahmet", "Angela", "Francis", "Maria", "Pedro", "Trump", "Trump", "Trump", "Trump", "Trump", "Trump",
+               "Trump", "Trump", "Trump"]
 }
 
-# DataFrame oluşturuluyor
-my_data = pd.DataFrame(data, index=["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"])
-print(my_data)
+my_countries = pd.DataFrame(countries)
+print(my_countries)
 
-# HTML dosyası oluşturuluyor
-with open("data.html", "w", encoding="utf-8") as f:
+with open("countries.html", "w", encoding="utf-8") as f:
     f.write(f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -23,8 +37,8 @@ with open("data.html", "w", encoding="utf-8") as f:
     </head>
     <body>
         <div class="container">
-            <h1 class="mt-4">Data About Calories</h1>
-            {my_data.to_html(classes="table table-striped")}
+            <h1 class="mt-4">Data About Countries</h1>
+            {my_countries.to_html(classes="table table-striped")}
         </div>
     </body>
     </html>
