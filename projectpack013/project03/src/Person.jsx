@@ -19,3 +19,5 @@ Person.propTypes = {
   age: PropTypes.number,
   salary: PropTypes.number,
 };
+
+export default Person;
