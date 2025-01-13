@@ -1,0 +1,54 @@
+/* Genel Ayarlar */
+body {
+  background-color: #f4f4f9; /* Hafif gri arka plan */
+  color: #333; /* Varsayılan metin rengi */
+  font-family: "Arial", sans-serif; /* Genel yazı tipi */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header'ın altında ve Footer'ın üstünde boşluk bırak */
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+/* Ana Uygulama Konteyneri */
+.app-container {
+  max-width: 1200px; /* Maksimum genişlik */
+  margin: 0 auto; /* Ortala */
+  padding: 20px; /* İç boşluk */
+}
+
+/* Person Bileşenleri İçin Düzen */
+.person-list {
+  display: flex; /* Yatay hizalama */
+  flex-wrap: wrap; /* Alt satıra taşma */
+  gap: 20px; /* Kartlar arasındaki boşluk */
+  justify-content: center; /* Ortala */
+  margin-bottom: 40px; /* Alt boşluk */
+}
+
+/* WebTechs Bileşenleri İçin Düzen */
+.webtechs-container {
+  margin-bottom: 30px; /* Alt boşluk */
+  display: flex; /* Yatay hizalama */
+  justify-content: center; /* Ortala */
+  gap: 20px; /* Bileşenler arasındaki boşluk */
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+  .person-list {
+    flex-direction: column; /* Küçük ekranlarda dikey hizalama */
+    align-items: center; /* Ortala */
+  }
+
+  .webtechs-container {
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center; /* Ortala */
+  }
+}
