@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 const Person = ({ name, lastname, job, age, salary }) => {
   const style = {
+    display: "inline-block",
     color: "red",
     fontSize: "20px",
     backgroundColor: "yellow",
