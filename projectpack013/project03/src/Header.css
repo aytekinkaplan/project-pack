@@ -1,0 +1,47 @@
+/* Header Container */
+.header {
+  background: linear-gradient(
+    135deg,
+    #ff7eb3,
+    #ff758c
+  ); /* Gradient arka plan */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px; /* Hafif yuvarlatılmış köşeler */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  color: #fff; /* Metin rengi */
+}
+
+/* Header Title */
+.header-title {
+  font-size: 2.5rem; /* Büyük başlık */
+  margin-bottom: 10px;
+  font-family: "Arial", sans-serif; /* Şık bir font */
+}
+
+/* Navigation Bar */
+.header-nav {
+  margin-top: 10px;
+}
+
+.nav-list {
+  list-style: none; /* Varsayılan liste noktalarını kaldır */
+  display: flex; /* Yatay liste */
+  justify-content: center; /* Ortala */
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Items */
+.nav-item {
+  font-size: 1.2rem; /* Yazı boyutu */
+  color: #fff;
+  margin: 0 15px; /* Yatay boşluk */
+  cursor: pointer; /* İmleç değişimi */
+  transition: color 0.3s ease; /* Renk geçiş animasyonu */
+}
+
+.nav-item:hover {
+  color: #ffebcc; /* Hover durumunda renk değişimi */
+  text-decoration: underline; /* Alt çizgi ekle */
+}
