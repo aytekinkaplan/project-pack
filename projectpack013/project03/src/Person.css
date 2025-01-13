@@ -1,0 +1,19 @@
+.person-container {
+  display: inline-block;
+  color: #333;
+  font-size: 18px;
+  background: linear-gradient(135deg, #f3ec78, #af4261);
+  border: none;
+  margin: 15px;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
