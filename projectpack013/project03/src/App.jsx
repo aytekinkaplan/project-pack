@@ -1,4 +1,8 @@
+import "./App.css";
 import Person from "./Person";
+import WebTechs from "./WebTechs";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   const people = [
@@ -48,19 +52,52 @@ function App() {
       salary: 4700,
     },
   ];
+
   return (
-    <>
-      {people.map((person, index) => (
-        <Person
-          key={index}
-          name={person.name}
-          lastname={person.lastname}
-          job={person.job}
-          age={person.age}
-          salary={person.salary}
+    <div className="app-container">
+      <Header title="My Team" />
+
+      <div className="person-list">
+        {people.map((person, index) => (
+          <Person
+            key={index}
+            name={person.name}
+            lastname={person.lastname}
+            job={person.job}
+            age={person.age}
+            salary={person.salary}
+          />
+        ))}
+      </div>
+
+      <div className="webtechs-container">
+        <WebTechs
+          webTechs={[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Redux",
+            "Node",
+            "MongoDB",
+          ]}
         />
-      ))}
-    </>
+        <WebTechs
+          webTechs={[
+            "Python",
+            "Django",
+            "Flask",
+            "SQL",
+            "MySQL",
+            "PostgreSQL",
+            "MongoDB",
+          ]}
+        />
+        <WebTechs webTechs={["HTML", "CSS", "JavaScript", "React", "Redux"]} />
+      </div>
+
+      <Footer />
+    </div>
   );
 }
 
