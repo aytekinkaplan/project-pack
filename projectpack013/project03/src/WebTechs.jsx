@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
+import "./WebTechs.css"; // CSS dosyasını dahil ettik
 
 const WebTechs = ({ webTechs }) => {
   return (
-    <div>
-      <ul>
+    <div className="webtech-container">
+      <ul className="webtech-list">
         {webTechs.map((tech) => (
-          <li key={tech}>{tech}</li>
+          <li className="webtech-item" key={tech}>
+            {tech}
+          </li>
         ))}
       </ul>
     </div>
