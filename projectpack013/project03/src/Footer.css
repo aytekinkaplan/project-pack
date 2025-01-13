@@ -1,0 +1,34 @@
+/* Footer Container */
+.footer {
+  background-color: #333; /* Koyu arka plan */
+  color: #fff; /* Metin rengi */
+  padding: 20px 40px; /* İç boşluk */
+  text-align: center; /* Metinleri ortala */
+  border-top: 5px solid #ff7eb3; /* Üstte şerit */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2); /* Hafif üst gölge */
+}
+
+/* Footer İçerik */
+.footer-content {
+  max-width: 800px; /* Maksimum genişlik */
+  margin: 0 auto; /* Ortala */
+}
+
+/* Footer Başlık */
+.footer-title {
+  font-size: 1.5rem; /* Başlık yazı boyutu */
+  margin-bottom: 10px;
+  font-weight: bold; /* Kalın yazı */
+}
+
+/* Copyright Bilgisi */
+.footer-copy {
+  font-size: 1rem; /* Daha küçük yazı boyutu */
+  color: #bbb; /* Hafif gri renk */
+  margin-top: 5px;
+}
+
+.footer-copy:hover {
+  color: #ff7eb3; /* Hover durumunda renk değişimi */
+  transition: color 0.3s ease; /* Geçiş animasyonu */
+}
