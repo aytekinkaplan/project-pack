@@ -1,0 +1,67 @@
+/* Genel Stil */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937; /* Dark navy color */
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+  text-decoration: none;
+  color: #f9fafb; /* White */
+  margin: 0 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  position: relative;
+}
+
+/* Hover Animasyonu */
+.header a:hover {
+  color: #60a5fa; /* Sky blue */
+  transform: scale(1.1); /* Slight enlarge */
+}
+
+/* Alt Çizgi Hover */
+.header a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #60a5fa;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+.header a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Duyarlılık (Responsive) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+}
