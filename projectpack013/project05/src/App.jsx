@@ -5,7 +5,8 @@ const App = () => {
   return (
     <div>
       <Header title="Welcome to My App!" />
-      <Mermaid />
+      <Mermaid title="Mermaid Diagrams" />
+      <Mermaid title="More Mermaid Diagrams" />
     </div>
   );
 };
