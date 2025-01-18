@@ -30,7 +30,6 @@ const App = () => {
     <div>
       <Header title="Welcome to My App!" />
       <Mermaid title="Mermaid Diagrams" diagrams={diagrams} />
-      <Mermaid title="Mermaid Diagrams" diagrams={diagrams} />
     </div>
   );
 };
