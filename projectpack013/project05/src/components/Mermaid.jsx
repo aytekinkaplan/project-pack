@@ -1,27 +1,21 @@
 import { useEffect } from "react";
 import mermaid from "mermaid";
+import PropTypes from "prop-types";
 import "./Mermaid.css";
 
-const Mermaid = () => {
+const Mermaid = ({ title, diagrams }) => {
   useEffect(() => {
-    mermaid.initialize({ startOnLoad: true });
+    try {
+      mermaid.initialize({ startOnLoad: true });
+    } catch (error) {
+      console.error("Mermaid initialization failed:", error);
+    }
   }, []);
-
-  const diagramData = [
-    {
-      id: 1,
-      title: "Diagram 1",
-      content: `graph TD; A[Clieant] -->|tcp_1234| B
-      B((Load Balancer))
-      B --> |tcp_456| C[Server]
-      B --> |tcp_789| D[Server]`,
-    },
-  ];
 
   return (
     <div>
-      <h1>Mermaid Diagrams</h1>
-      {diagramData.map((diagram) => (
+      <h1>{title}</h1>
+      {diagrams.map((diagram) => (
         <div key={diagram.id}>
           <h2>{diagram.title}</h2>
           <div
@@ -32,6 +26,17 @@ const Mermaid = () => {
       ))}
     </div>
   );
+};
+
+Mermaid.propTypes = {
+  title: PropTypes.string.isRequired,
+  diagrams: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Mermaid;
