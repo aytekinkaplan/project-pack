@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-['Poppins'];
+  }
+}
+
+@layer components {
+  .blog-container {
+    @apply max-w-4xl mx-auto px-6 py-16;
+  }
+
+  .blog-header {
+    @apply relative mb-16 pb-8 border-b border-gray-200;
+  }
+
+  .blog-category {
+    @apply inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-600 
+           font-medium text-sm mb-4 hover:bg-blue-200 transition-colors;
+  }
+
+  .blog-title {
+    @apply text-5xl font-bold text-gray-800 mb-6 leading-tight;
+  }
+
+  .blog-excerpt {
+    @apply text-xl text-gray-600 leading-relaxed mb-6;
+  }
+
+  .blog-date {
+    @apply text-gray-500 font-medium;
+  }
+
+  .blog-content {
+    @apply relative;
+  }
+
+  .blog-content h1 {
+    @apply text-4xl font-bold text-gray-800 mb-8 relative
+           before:content-[''] before:absolute before:-left-4 before:top-0 
+           before:h-full before:w-1 before:bg-blue-500 before:rounded-full;
+  }
+
+  .blog-content h2 {
+    @apply text-3xl font-semibold text-gray-800 mt-12 mb-6 
+           pb-2 border-b-2 border-gray-200;
+  }
+
+  .blog-content p {
+    @apply text-lg text-gray-700 leading-relaxed mb-6 
+           first-letter:text-4xl first-letter:font-bold first-letter:text-blue-600
+           first-letter:mr-1 first-letter:float-left;
+  }
+
+  .blog-content ul {
+    @apply space-y-3 mb-8 ml-6;
+  }
+
+  .blog-content ul li {
+    @apply text-lg text-gray-700 relative pl-6
+           before:content-['•'] before:absolute before:left-0 before:text-blue-500
+           before:font-bold before:text-xl;
+  }
+
+  .blog-content a {
+    @apply text-blue-600 font-medium hover:text-blue-800 
+           border-b-2 border-blue-200 hover:border-blue-600 
+           transition-all duration-200;
+  }
+
+  .blog-content blockquote {
+    @apply pl-6 py-1 border-l-4 border-blue-500 
+           bg-blue-50 rounded-r-lg my-8;
+  }
+
+  .blog-content code {
+    @apply px-2 py-1 rounded bg-gray-100 text-gray-800 
+           font-mono text-sm;
+  }
+
+  /* Özel animasyonlar */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .blog-container {
+    animation: fadeIn 0.6s ease-out;
+  }
+}
