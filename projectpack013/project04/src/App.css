@@ -1,6 +1,13 @@
 /* Genel Stil */
 
 /* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Genel Stil */
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
